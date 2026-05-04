@@ -1,17 +1,16 @@
 # 📈 Stock Market Analysis (Yahoo Finance Data)
 Conducted stock market analysis using Python, SQL, and Power BI to evaluate trends, volatility, and returns. Applied time-series techniques and visualizations to compare performance across stocks and derive insights for investment and risk assessment
 
-
 ## 📌 Business Problem  
-Investors face difficulty in analyzing large volumes of stock market data to identify trends, volatility, and optimal investment opportunities. This project analyzes historical stock data to uncover performance patterns, risk-return relationships, and actionable insights for data-driven decision-making.
+Investors struggle to interpret large-scale stock data to identify profitable and stable investment opportunities. This project analyzes historical stock data to uncover performance trends, volatility patterns, and risk-return relationships for smarter decision-making.
 
 ---
 
 ## 🎯 Objective  
-- Analyze historical stock price movements (2018–2023)  
-- Identify trends, volatility, and return patterns  
-- Compare performance across multiple stocks  
-- Enable data-driven investment strategies  
+- Analyze stock price trends from 2018–2023  
+- Identify high-return and low-risk stocks  
+- Understand volatility and trading behavior  
+- Enable data-driven investment insights  
 
 ---
 
@@ -19,117 +18,130 @@ Investors face difficulty in analyzing large volumes of stock market data to ide
 
 ### 🔹 Python (Pandas, NumPy, Matplotlib, Seaborn)
 - Data cleaning and preprocessing  
-- Time-series analysis of stock prices  
-- Calculation of daily returns and rolling averages  
-- Visualization of trends and volatility  
+- Feature engineering (Returns, Volatility, Moving Averages)  
+- Time-series and distribution analysis  
+- Visualization of trends and relationships  
 
 ### 🔹 SQL  
-- Aggregation of stock data by time periods  
-- Identification of high-performing and high-risk stocks  
-- Comparative analysis across multiple stocks  
+- Identification of top-performing stocks using **average returns**  
+- Risk analysis using **volatility (standard deviation of returns)**  
+- Detection of strong market movements using **volume spikes (>1.5x)**  
+- Filtering balanced stocks using:
+  - Return > **1%**
+  - Volatility < **2.5%**  
 
 ### 🔹 Power BI  
-- Interactive dashboard for stock performance tracking  
-- KPI visualization (Average Price, Volatility, Returns)  
-- Trend and risk-return analysis  
+- Interactive dashboard for performance tracking  
+- Risk vs return visualization  
+- Market trend and stock comparison analysis  
 
 ---
 
 ## 📊 Dataset  
-- Source: Yahoo Finance (via Kaggle)  
-- Time Period: **2018 – 2023**  
-- Records: **~1M+ rows (multi-stock dataset)**  
-- Features: Date, Open, Close, High, Low, Volume, Stock  
+- Source: Yahoo Finance (Kaggle)  
+- Period: **2018 – 2023**  
+- Data includes: Open, Close, High, Low, Volume, Dividends  
 
 ---
 
 ## 📊 Key Insights  
 
 ### 📈 Market Trends
-- Majority of stocks show **long-term upward trend (~60–80% growth)** over 5 years  
-- Significant **market corrections observed during 2020 (COVID impact)**  
+- Stock prices show **clear trend cycles with periodic corrections**  
+- Long-term trends are more reliable than short-term fluctuations  
 
 ---
 
 ### 📊 Volatility Analysis
-- High-growth stocks exhibit **volatility levels 1.5–2x higher** than stable stocks  
-- Standard deviation of returns ranges between **1.2% – 3.5% daily** across stocks  
+- Volatility calculated using **20-day rolling standard deviation**  
+- Stocks with higher returns consistently exhibit **higher volatility**  
 
 ---
 
 ### 💰 Returns Analysis
-- Average annual return observed between **12% – 25%** depending on stock  
-- High-return stocks show strong correlation with increased volatility  
-- Moving averages (20-day & 50-day) effectively capture trend reversals  
+- Daily returns calculated using percentage change  
+- Significant movements defined as **>2% daily return**  
+- Moving averages (20-day) help identify trend direction  
 
 ---
 
 ### ⚖️ Risk vs Return
-- Positive correlation (~0.6–0.75) between **risk (volatility) and returns**  
-- Low-volatility stocks deliver stable but moderate returns (~10–15%)  
-- High-volatility stocks offer higher upside but increased downside risk  
+- Positive relationship observed between **return and volatility**  
+- Stocks with:
+  - Return > **1%**
+  - Volatility < **2.5%**  
+  → Identified as **balanced investment opportunities**  
 
 ---
 
-### ⚠️ Key Observations
-- Short-term fluctuations are noisy; long-term trends are more reliable  
-- Volume spikes often precede major price movements  
-- Diversification reduces overall portfolio risk  
+### 🔥 Volume-Based Insights
+- Volume spikes defined as **>1.5x average trading volume**  
+- Strong price movements often occur when:
+  - Volume Spike > **1.5**
+  - Return > **2%**  
+- Indicates **high market participation / institutional activity**  
+
+---
+
+### 📊 Consistency Analysis
+- Stable stocks identified using:
+  - Positive average return  
+  - Low standard deviation (<2%)  
+- Useful for long-term portfolio construction  
 
 ---
 
 ## ⚠️ Challenges & Solutions  
 
-### 🔹 Time-Series Complexity  
-Handled using rolling averages and trend-based analysis  
+### 🔹 High Market Noise  
+→ Solved using rolling averages and smoothing  
 
-### 🔹 Market Noise & Fluctuations  
-Smoothed using moving averages for clearer trend identification  
+### 🔹 Multi-stock Comparison  
+→ Standardized metrics (Return, Volatility)  
 
-### 🔹 Multi-Stock Comparison  
-Standardized metrics (returns, volatility) for fair comparison  
+### 🔹 Identifying Meaningful Signals  
+→ Combined filters (Return + Volume + Risk thresholds)  
 
 ---
 
 ## 🚀 Business Impact  
-- Helps investors identify high-performing and stable stocks  
-- Enables understanding of risk-return trade-offs  
-- Supports portfolio diversification strategies  
-- Provides data-driven insights for investment decisions  
+- Helps identify **high-return vs low-risk stocks**  
+- Supports **portfolio diversification decisions**  
+- Enables detection of **high-confidence market movements**  
+- Converts raw stock data into **actionable investment insights**  
 
 ---
 
 ## 📂 Project Structure  
-- `Data/` → dataset (linked externally due to size)  
-- `Notebook/` → EDA and analysis  
-- `SQL_Queries/` → stock analysis queries  
+- `Data/` → dataset (external due to size)  
+- `Notebook/` → Python EDA  
+- `SQL_Queries/` → analytical queries  
 - `Dashboard/` → Power BI dashboard  
 - `Images/` → visual outputs  
 
 ---
 
 ## 📊 Dataset Link  
-👉 https://www.kaggle.com/datasets/suruchiarora/yahoo-finance-dataset-2018-2023  
+https://www.kaggle.com/datasets/suruchiarora/yahoo-finance-dataset-2018-2023  
 
 ---
 
 ## 📊 Power BI Dashboard  
-👉 [Download Dashboard (.pbix)](ADD_YOUR_GOOGLE_DRIVE_LINK_HERE)  
-
-*Dashboard hosted externally due to GitHub file size limitations.*
+👉 https://drive.google.com/file/d/140POxWZjUVCPR0-IEuWF_-iF6gl815z_/view?usp=drive_link  
 
 ---
 
 ## 📸 Dashboard Preview  
 
-### Market Trends  
-![Market Trends](Images/Market_Trend_Analysis.png)
-
+ 
 ### Performance Analysis  
 ![Performance](Images/Performance_Analysis.png)
 
 ### Risk vs Return  
 ![Risk Return](Images/Risk_vs_Return_Analysis.png)
+
+### Market Trends  
+![Market Trends](Images/Market_Trend_Analysis.png)
 
 ### Business Insights  
 ![Insights](Images/Stock_Business_insights.png)
