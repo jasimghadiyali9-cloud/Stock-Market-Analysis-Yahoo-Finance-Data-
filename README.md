@@ -144,4 +144,4 @@ https://www.kaggle.com/datasets/suruchiarora/yahoo-finance-dataset-2018-2023
 ![Market Trends](Images/Market_Trend_Analysis.png)
 
 ### Business Insights  
-![Insights](Images/Stock_Business_insights.png)
+![Insights](Images/Stock_Buisness_insights.png)
